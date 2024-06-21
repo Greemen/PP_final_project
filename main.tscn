@@ -609,3 +609,6 @@ theme_override_font_sizes/font_size = 25
 text = "Points: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Collectable" parent="." instance=ExtResource("4_4gclg")]
+position = Vector2(1757, -35)
