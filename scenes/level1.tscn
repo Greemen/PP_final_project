@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://btml8larxcbr6"]
+[gd_scene load_steps=11 format=3 uid="uid://btml8larxcbr6"]
 
 [ext_resource type="Script" path="res://game_manager.gd" id="1_i5g5s"]
 [ext_resource type="Texture2D" uid="uid://chwowfwnl8eah" path="res://Blue.png" id="2_782ew"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dka7b8yaxen71" path="res://scenes/end_trophy.tscn" id="5_esvqg"]
 [ext_resource type="PackedScene" uid="uid://dhjag8sgohyhx" path="res://scenes/main_menu.tscn" id="6_qoutl"]
 [ext_resource type="PackedScene" uid="uid://c3lhjrfdq3si2" path="res://scenes/main_character.tscn" id="6_ukxeb"]
+[ext_resource type="Texture2D" uid="uid://cqromhq4l10y6" path="res://redhearth.png" id="8_yb5s1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_najkk"]
 texture = ExtResource("3_t25s2")
@@ -616,6 +617,52 @@ theme_override_font_sizes/font_size = 25
 text = "Points: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Hearts" type="Panel" parent="UI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -160.0
+offset_top = 8.0
+offset_right = -12.0
+offset_bottom = 51.0
+grow_horizontal = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Hearts"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.5
+offset_top = -15.5
+offset_right = 50.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Hearth" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("8_yb5s1")
+expand_mode = 2
+
+[node name="Hearth2" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("8_yb5s1")
+expand_mode = 2
+
+[node name="Hearth3" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("8_yb5s1")
+expand_mode = 2
 
 [node name="Collectable" parent="." instance=ExtResource("4_xe305")]
 position = Vector2(1757, -35)
