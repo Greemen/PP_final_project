@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqromhq4l10y6"
-path="res://.godot/imported/redhearth.png-e6919fdc98197f230d987b30eae05694.ctex"
+uid="uid://87ubkcf0xe7n"
+path="res://.godot/imported/Jump (32x32).png-08b43026e01ec10de869f7c1f82a9e93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://redhearth.png"
-dest_files=["res://.godot/imported/redhearth.png-e6919fdc98197f230d987b30eae05694.ctex"]
+source_file="res://assets/character/Jump (32x32).png"
+dest_files=["res://.godot/imported/Jump (32x32).png-08b43026e01ec10de869f7c1f82a9e93.ctex"]
 
 [params]
 

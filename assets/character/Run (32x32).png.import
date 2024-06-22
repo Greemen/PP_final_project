@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dieo4qdc4wu7q"
-path="res://.godot/imported/Terrain (16x16).png-f072e8a5f99e915c05031c83401c87a9.ctex"
+uid="uid://e1iru4seqr4n"
+path="res://.godot/imported/Run (32x32).png-729cb1f03c499caf10b161c23b503655.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Terrain (16x16).png"
-dest_files=["res://.godot/imported/Terrain (16x16).png-f072e8a5f99e915c05031c83401c87a9.ctex"]
+source_file="res://assets/character/Run (32x32).png"
+dest_files=["res://.godot/imported/Run (32x32).png-729cb1f03c499caf10b161c23b503655.ctex"]
 
 [params]
 

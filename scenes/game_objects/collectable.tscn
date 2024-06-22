@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://ccyncd6w2gehk"]
 
-[ext_resource type="Script" path="res://scenes/collectable.gd" id="1_fjf4b"]
-[ext_resource type="Texture2D" uid="uid://cdesluutnwvk8" path="res://Cherries.png" id="1_i1j4g"]
+[ext_resource type="Script" path="res://scenes/game_objects/collectable.gd" id="1_fjf4b"]
+[ext_resource type="Texture2D" uid="uid://cdesluutnwvk8" path="res://assets/game_elements/Cherries.png" id="1_i1j4g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qcb27"]
 atlas = ExtResource("1_i1j4g")

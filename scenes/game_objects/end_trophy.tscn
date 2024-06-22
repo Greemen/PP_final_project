@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://dka7b8yaxen71"]
 
-[ext_resource type="Script" path="res://scenes/end_trophy.gd" id="1_b1mww"]
-[ext_resource type="Texture2D" uid="uid://c7okvijpaxs3w" path="res://End (Pressed) (64x64).png" id="1_wdw7u"]
+[ext_resource type="Script" path="res://scenes/game_objects/end_trophy.gd" id="1_b1mww"]
+[ext_resource type="Texture2D" uid="uid://c7okvijpaxs3w" path="res://assets/game_elements/End (Pressed) (64x64).png" id="1_wdw7u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ls675"]
 atlas = ExtResource("1_wdw7u")

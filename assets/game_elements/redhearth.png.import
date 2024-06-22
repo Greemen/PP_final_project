@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0fgoi8b0w0yu"
-path="res://.godot/imported/Idle (36x34).png-bf7e0c4880b669f02c340085f29e4a4e.ctex"
+uid="uid://cqromhq4l10y6"
+path="res://.godot/imported/redhearth.png-bc973eb8da3ff387315e4217f03de751.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Idle (36x34).png"
-dest_files=["res://.godot/imported/Idle (36x34).png-bf7e0c4880b669f02c340085f29e4a4e.ctex"]
+source_file="res://assets/game_elements/redhearth.png"
+dest_files=["res://.godot/imported/redhearth.png-bc973eb8da3ff387315e4217f03de751.ctex"]
 
 [params]
 
