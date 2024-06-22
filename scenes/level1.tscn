@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://btml8larxcbr6"]
+[gd_scene load_steps=10 format=3 uid="uid://btml8larxcbr6"]
 
 [ext_resource type="Script" path="res://game_manager.gd" id="1_i5g5s"]
 [ext_resource type="Texture2D" uid="uid://chwowfwnl8eah" path="res://Blue.png" id="2_782ew"]
 [ext_resource type="Texture2D" uid="uid://dieo4qdc4wu7q" path="res://Terrain (16x16).png" id="3_t25s2"]
 [ext_resource type="PackedScene" uid="uid://ccyncd6w2gehk" path="res://scenes/collectable.tscn" id="4_xe305"]
 [ext_resource type="PackedScene" uid="uid://dka7b8yaxen71" path="res://scenes/end_trophy.tscn" id="5_esvqg"]
+[ext_resource type="PackedScene" uid="uid://dhjag8sgohyhx" path="res://scenes/main_menu.tscn" id="6_qoutl"]
 [ext_resource type="PackedScene" uid="uid://c3lhjrfdq3si2" path="res://scenes/main_character.tscn" id="6_ukxeb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_najkk"]
@@ -584,9 +585,10 @@ position = Vector2(2461, 555)
 
 [node name="Finish" parent="SceneObjects" instance=ExtResource("5_esvqg")]
 position = Vector2(2463, 267)
+target_level = ExtResource("6_qoutl")
 
 [node name="CharacterBody2D" parent="SceneObjects" instance=ExtResource("6_ukxeb")]
-position = Vector2(1171, -81.9999)
+position = Vector2(98, 436)
 
 [node name="Camera2D" type="Camera2D" parent="SceneObjects/CharacterBody2D"]
 position = Vector2(1.6, 4.41074e-06)
