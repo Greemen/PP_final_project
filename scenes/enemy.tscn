@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://cu24dfelurfm5"]
+
+[ext_resource type="Texture2D" uid="uid://d0fgoi8b0w0yu" path="res://Idle (36x34).png" id="1_co7ex"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sb2ht"]
+atlas = ExtResource("1_co7ex")
+region = Rect2(0, 0, 36, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ol6br"]
+atlas = ExtResource("1_co7ex")
+region = Rect2(36, 0, 36, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iq417"]
+atlas = ExtResource("1_co7ex")
+region = Rect2(72, 0, 36, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewy5p"]
+atlas = ExtResource("1_co7ex")
+region = Rect2(108, 0, 36, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8slqr"]
+atlas = ExtResource("1_co7ex")
+region = Rect2(144, 0, 36, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0k64c"]
+atlas = ExtResource("1_co7ex")
+region = Rect2(180, 0, 36, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nvqgw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sb2ht")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ol6br")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iq417")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewy5p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8slqr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0k64c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_64lsc"]
+radius = 36.0
+height = 84.0
+
+[node name="Enemy" type="RigidBody2D"]
+position = Vector2(-15, -9)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(15.75, 12.25)
+scale = Vector2(2.125, 2.27941)
+sprite_frames = SubResource("SpriteFrames_nvqgw")
+autoplay = "default"
+frame_progress = 0.76228
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(14, 10)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_64lsc")
