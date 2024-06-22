@@ -520,9 +520,10 @@ sources/0 = SubResource("TileSetAtlasSource_najkk")
 
 [node name="Node" type="Node"]
 
-[node name="GameManager" type="Node" parent="."]
+[node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
 unique_name_in_owner = true
 script = ExtResource("1_o64lo")
+hearts = [NodePath("../UI/Hearts/HBoxContainer/Hearth"), NodePath("../UI/Hearts/HBoxContainer/Hearth2"), NodePath("../UI/Hearts/HBoxContainer/Hearth3")]
 
 [node name="SceneObjects" type="Node" parent="."]
 
@@ -651,7 +652,6 @@ alignment = 1
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("8_3jyn6")
 expand_mode = 2
 
 [node name="Hearth2" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
