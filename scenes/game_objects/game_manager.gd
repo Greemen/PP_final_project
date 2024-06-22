@@ -1,6 +1,6 @@
 extends Node
-@onready var points_label = %PointsLabel
 @export var hearts : Array[Node]
+@onready var points_label = $"../UI/Panel/PointsLabel"
 
 var points = 0
 var lives = 3
