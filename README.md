@@ -1,5 +1,7 @@
 # Final_project
  PO_project_game
+
+ NOVINKY: 26.06.2024 -> Přidána podpora pro Androind
  
  Letošní ročníkové téma projektu je: “Nejlepší 2D hra pro den otevřených dveří na FAI”. 
 
