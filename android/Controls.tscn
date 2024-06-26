@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfbxscnokqbgu"]
+
+[ext_resource type="Texture2D" uid="uid://ejjg0qymryln" path="res://android/Navigation/Left.png" id="1_ppse2"]
+[ext_resource type="Texture2D" uid="uid://brv00mro5l6kh" path="res://android/Navigation/Right.png" id="2_3gh7g"]
+[ext_resource type="Texture2D" uid="uid://b2mlgb3x8x6kk" path="res://android/Navigation/Jump.png" id="3_yivsw"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(24, 16)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="left" type="TouchScreenButton" parent="HBoxContainer"]
+texture_filter = 1
+position = Vector2(44, 6)
+scale = Vector2(6, 5.389)
+texture_normal = ExtResource("1_ppse2")
+action = "left"
+
+[node name="right" type="TouchScreenButton" parent="HBoxContainer"]
+texture_filter = 1
+position = Vector2(187, 6.00001)
+scale = Vector2(6, 5.389)
+texture_normal = ExtResource("2_3gh7g")
+action = "right"
+
+[node name="jump" type="TouchScreenButton" parent="HBoxContainer"]
+texture_filter = 1
+position = Vector2(981, 6)
+scale = Vector2(6, 5.389)
+texture_normal = ExtResource("3_yivsw")
+action = "jump"

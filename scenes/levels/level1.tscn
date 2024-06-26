@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://btml8larxcbr6"]
+[gd_scene load_steps=15 format=3 uid="uid://btml8larxcbr6"]
 
 [ext_resource type="Script" path="res://scenes/game_objects/game_manager.gd" id="1_o64lo"]
 [ext_resource type="Texture2D" uid="uid://chwowfwnl8eah" path="res://assets/background/Blue.png" id="2_m4om5"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://c3lhjrfdq3si2" path="res://scenes/game_objects/main_character.tscn" id="7_bvei6"]
 [ext_resource type="Texture2D" uid="uid://cqromhq4l10y6" path="res://assets/game_elements/redhearth.png" id="8_3jyn6"]
 [ext_resource type="Script" path="res://scenes/levels/PausePanel.gd" id="9_3gv0r"]
+[ext_resource type="PackedScene" uid="uid://cfbxscnokqbgu" path="res://android/Controls.tscn" id="10_2sxwb"]
+[ext_resource type="Script" path="res://android/Controls.gd" id="11_l7pqa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_najkk"]
 texture = ExtResource("3_otyi2")
@@ -518,12 +520,15 @@ texture = ExtResource("3_otyi2")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_najkk")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bxbr5"]
+size = Vector2(140, 40)
+
 [node name="Node" type="Node"]
 
 [node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
 unique_name_in_owner = true
 script = ExtResource("1_o64lo")
-hearts = [NodePath("../UI/Hearts/HBoxContainer/Hearth"), NodePath("../UI/Hearts/HBoxContainer/Hearth2"), NodePath("../UI/Hearts/HBoxContainer/Hearth3")]
+hearts = [null, null, null]
 
 [node name="SceneObjects" type="Node" parent="."]
 
@@ -611,11 +616,11 @@ offset_right = 161.0
 offset_bottom = 49.0
 
 [node name="PointsLabel" type="Label" parent="UI/Panel"]
-unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 25
@@ -623,14 +628,19 @@ text = "Points: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="PauseOnTouch" type="TouchScreenButton" parent="UI/Panel"]
+position = Vector2(74, 22)
+shape = SubResource("RectangleShape2D_bxbr5")
+action = "pause"
+
 [node name="Hearts" type="Panel" parent="UI"]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -160.0
-offset_top = 8.0
-offset_right = -12.0
-offset_bottom = 51.0
+offset_left = -163.0
+offset_top = 9.0
+offset_right = -15.0
+offset_bottom = 52.0
 grow_horizontal = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI/Hearts"]
@@ -723,6 +733,10 @@ process_mode = 3
 layout_mode = 2
 text = "Menu"
 
-[connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="GameManager" method="_on_resume_pressed"]
+[node name="Controls" parent="UI" instance=ExtResource("10_2sxwb")]
+unique_name_in_owner = true
+position = Vector2(9, 451)
+script = ExtResource("11_l7pqa")
+
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause/PausePanel" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Menu" to="UI/Pause/PausePanel" method="_on_menu_pressed"]

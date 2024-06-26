@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d2rlfqqh5j2h7"]
+[gd_scene load_steps=16 format=3 uid="uid://d2rlfqqh5j2h7"]
 
 [ext_resource type="Script" path="res://scenes/game_objects/game_manager.gd" id="1_me11h"]
 [ext_resource type="Texture2D" uid="uid://b56vn7o64fse1" path="res://assets/background/Yellow.png" id="2_rvyks"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://cu24dfelurfm5" path="res://scenes/game_objects/enemy.tscn" id="8_q7eqp"]
 [ext_resource type="Texture2D" uid="uid://cqromhq4l10y6" path="res://assets/game_elements/redhearth.png" id="9_cx5wc"]
 [ext_resource type="Script" path="res://scenes/levels/PausePanel.gd" id="10_qeeol"]
+[ext_resource type="PackedScene" uid="uid://cfbxscnokqbgu" path="res://android/Controls.tscn" id="11_jy01e"]
+[ext_resource type="Script" path="res://android/Controls.gd" id="12_88dil"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_najkk"]
 texture = ExtResource("3_osjag")
@@ -527,6 +529,9 @@ texture = ExtResource("3_osjag")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_najkk")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3yn3"]
+size = Vector2(140, 40)
+
 [node name="Node" type="Node"]
 
 [node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
@@ -621,12 +626,18 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 25
 text = "Points: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="PauseOnTouch" type="TouchScreenButton" parent="UI/Panel"]
+position = Vector2(74, 22)
+shape = SubResource("RectangleShape2D_x3yn3")
+action = "pause"
 
 [node name="Hearts" type="Panel" parent="UI"]
 anchors_preset = 1
@@ -727,6 +738,11 @@ text = "Resume
 process_mode = 3
 layout_mode = 2
 text = "Menu"
+
+[node name="Controls" parent="UI" instance=ExtResource("11_jy01e")]
+unique_name_in_owner = true
+position = Vector2(9, 451)
+script = ExtResource("12_88dil")
 
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause/PausePanel" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Menu" to="UI/Pause/PausePanel" method="_on_menu_pressed"]
